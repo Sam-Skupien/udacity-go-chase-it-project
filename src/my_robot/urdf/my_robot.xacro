@@ -28,28 +28,28 @@
     <collision name='collision'>
       <origin xyz="0 0 0" rpy=" 0 0 0"/> 
       <geometry>
-        <box size=".7 .2 .1"/>
+        <box size=".5 .2 .1"/>
       </geometry>
     </collision>
 
     <visual name="chassis_visual">
       <origin xyz="0 0 0" rpy=" 0 0 0"/>
       <geometry>
-        <box size=".7 .2 .1"/>
+        <box size=".5 .2 .1"/>
       </geometry>
     </visual>
 
     <collision name='front_caster_collision'>
-      <origin xyz="0.15 0 -0.05" rpy=" 0 0 0"/>
+      <origin xyz="0.2 0 -0.05" rpy=" 0 0 0"/>
       <geometry>
-        <sphere radius="0.0499"/>
+        <sphere radius="0.02"/>
       </geometry>
     </collision>
 
     <visual name='front_caster_visual'>
       <origin xyz="0.15 0 -0.05" rpy=" 0 0 0"/>
       <geometry>
-        <sphere radius="0.05"/>
+        <sphere radius="0.02"/>
       </geometry>
     </visual>
 
@@ -87,7 +87,7 @@
   </link>
 
   <joint type="continuous" name="left_wheel_hinge">
-    <origin xyz="0 -0.13 0" rpy="0 0 0"/>
+    <origin xyz="-0.1 -0.13 0" rpy="0 0 0"/>
     <child link="left_wheel"/>
     <parent link="chassis"/>
     <axis xyz="0 1 0" rpy="0 0 0"/>
@@ -128,7 +128,7 @@
   </link>
 
   <joint type="continuous" name="right_wheel_hinge">
-    <origin xyz="0 0.13 0" rpy="0 0 0"/>
+    <origin xyz="-0.1 0.13 0" rpy="0 0 0"/>
     <child link="right_wheel"/>
     <parent link="chassis"/>
     <axis xyz="0 1 0" rpy="0 0 0"/>
@@ -169,7 +169,7 @@
   </link>
 
   <joint type="fixed" name="camera_joint">
-    <origin xyz="0.2 0 0" rpy="0 0 0"/>
+    <origin xyz="0.25 0 0" rpy="0 0 0"/>
     <child link="camera"/>
     <parent link="chassis"/>
     <axis xyz="0 1 0" rpy="0 0 0"/>
@@ -206,7 +206,7 @@
   </link>
 
   <joint type="fixed" name="hokuyo_joint">
-    <origin xyz="0.15 0 0.1" rpy="0 0 0"/>
+    <origin xyz="0.15 0 0.07" rpy="0 0 0"/>
     <child link="hokuyo"/>
     <parent link="chassis"/>
     <axis xyz="0 1 0" rpy="0 0 0"/>
@@ -222,7 +222,7 @@
 </gazebo>
 
 <gazebo reference="chassis">
-    <material>Gazebo/Grey</material>
+    <material>Gazebo/SkyBlue</material>
 </gazebo>
 
 <gazebo reference="camera">
